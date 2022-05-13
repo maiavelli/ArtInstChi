@@ -1,7 +1,7 @@
 # ArtInstChi
 
 # Description
-A simple application to help you determine which CTA train route to take and inform you of any active CTA alerts for your planned route.
+A simple application to illustrate artwork at the Art Institute of Chicago in Illinois and provide you with data on each piece specified in the input. 
 
 # User Story
 ```
@@ -28,6 +28,6 @@ THEN an image and data of the artwork populate the webpage
 
 - Blaise: 
 
-- Melissa: train tracker javascript
+- Melissa: 
 
-- Maia: css frameworks
+- Maia: 
