@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Institute of Chicago</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <!--header section-->
+    <section class = "hero is-info">
+        <div class= "hero-body has-text-centered"> 
+            <h1 class="title">Art Insitute of Chicago</h1>
+            <p class="subtitle"></p>
+        </div>
+    </section>
+
+    <!--section to input location for train-->
+    <div class = "columns has-text-centered">
+        <div class = "column field has-background-info-light">
+            <label class = "label">Location</label>
+            <figure class = "media-is-centered"></figure>
+                <p class= "image is-128x128">
+                    <img src = "https://bulma.io/images/placeholders/128x128.png">
+                </p>
+            <p class = "has-text-grey">*image of artwork to appear here</p>
+            <div class = "control">
+                <input class = "input is-medium mt-2" id = "input-val" type = "text" placeholder = "enter your location here">
+                <button class = "button is-primary is-rounded mt-2" id = "submitBtn" type = "submit" value = "Submit Input">Submit</button>
+            </div>
+        </div>
+
+        <!--section for route to populate into-->
+        <div class = "column tile is-8 is-parent has-background-info has-text-centered">
+            <div class = "tile is-child box has-background-info has-text-white">
+                <p class = "title has-text-white">Artwork Info</p>
+                <lorem> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus unde maiores alias libero aperiam nulla quo at quisquam culpa eaque enim beatae sapiente ab, a ipsa necessitatibus cum quos!</lorem>
+            </div>
+        </div>
+    </div>
