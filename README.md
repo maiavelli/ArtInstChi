@@ -23,11 +23,13 @@ THEN an image and data of the artwork populate the webpage
 
 - Data for Artwork: https://api.artic.edu/api/v1/artworks/{id}
 
+-
+
 # Tasks Breakdown
-- Colin: 
+- Colin: Image API
 
-- Blaise: 
+- Blaise: Wikipedia API
 
-- Melissa: 
+- Melissa: Wikipedia API
 
-- Maia: 
+- Maia: Update JavaScript Data to Page
