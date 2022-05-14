@@ -3,8 +3,8 @@
 var inputValue = document.getElementById('inputValue');
 var submitBtn = document.getElementById('submitBtn');
 
-// var searchBar = document.getElementById('searchBar');
-// var submitWBtn = document.getElementById('submitWBtn');
+var searchBar = document.getElementById('searchBar');
+var submitWBtn = document.getElementById('submitWBtn');
 
 //artwork info section variables
 var titleOfPieceEl = document.getElementById('titleOfPiece')
@@ -24,6 +24,23 @@ function getApi() {
 
         .then(function (data) {
             console.log(data);
+
+
+            for (var i = 0; i < 6; i++) {
+
+                var titleParagraph = document.createElement('p');
+
+                titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
+
+                artworkInfo.appendChild(titleParagraph);}
+        //title of piecee data
+            //var titleVal = data['data'][i]['title'];
+            //console.log(titleVal);
+
+        //display in HTML
+        //titleOfPieceEl.textContent = "title of piece: " + titleVal;}
+        });
+}
 
             for (var i = 0; i < 6; i++) {
 
