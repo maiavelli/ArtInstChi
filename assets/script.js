@@ -14,7 +14,7 @@ var artworkInfo = document.getElementById('artworkInfo');
 
 //search Art Insitute Database
 function getApi() {
-    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + "?fields=id,title,image_id";
+    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + "&fields=id,title,image_id";
     console.log(requestUrl);
 
 //fetch data via URL
@@ -33,15 +33,26 @@ function getApi() {
                 var titleParagraph = document.createElement('p');
 
                 titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
+            
+            //image display 
+                //var imageURL = data['config']['iiif_url'];
+                //var imageRetrieve = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
+                //var image = document.createElement('image');
+                //image.src = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
 
             //display in HTML
-                artworkInfo.appendChild(titleParagraph);}
-            
+                artworkInfo.appendChild(titleParagraph);
+                //artworkInfo.appendChild(image);
+            }
+
+            //image display 
             var imageURL = data['config']['iiif_url'];
             console.log(imageURL);
 
-            var imageRetrieve = imageURL + data['data'][0]['image_id'] + "/full/843,/0/default.jpg";
+            var imageRetrieve = imageURL + "/" + data['data'][0]['image_id'] + "/full/843,/0/default.jpg";
             console.log(imageRetrieve);
+            document.getElementById('imageOfPiece').src = imageRetrieve;
+
         });
 }
 
