@@ -1,18 +1,43 @@
+//global variables
+//search form variables
 var inputValue = document.getElementById('inputValue');
 var submitBtn = document.getElementById('submitBtn');
-var query = searchBar.value;
+
 var searchBar = document.getElementById('searchBar');
 var submitWBtn = document.getElementById('submitWBtn');
 
+//artwork info section variables
+var titleOfPieceEl = document.getElementById('titleOfPiece')
+var thumbnailEl = document.getElementById('thumbnail')
+var artworkInfo = document.getElementById('artworkInfo');
+
+
+//search Art Insitute Data Base
 function getApi() {
     var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value;
 
+//fetch data via URL
     fetch(requestUrl)
         .then(function (response) {
             return response.json();
         })
+
         .then(function (data) {
             console.log(data);
+
+            for (var i = 0; i < 6; i++) {
+
+                var titleParagraph = document.createElement('p');
+
+                titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
+
+                artworkInfo.appendChild(titleParagraph);}
+        //title of piecee data
+            //var titleVal = data['data'][i]['title'];
+            //console.log(titleVal);
+
+        //display in HTML
+        //titleOfPieceEl.textContent = "title of piece: " + titleVal;}
         });
 }
 
