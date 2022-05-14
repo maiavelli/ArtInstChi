@@ -24,7 +24,7 @@
             <label class="label">Search Here</label>
             <div class="box">
 
-                <p>Enter your search below to see current works in the Art Institute of Chicago. You can search by
+                <p>Enter your search below to see current works in the Art Institute of Chicago. You can also search by
                     artist, artwork name, or general topic (e.g. cats or dogs).</p>
 
             </div>
@@ -38,29 +38,24 @@
         <!--section for artwork to populate into-->
         <div class="column is-8 is-parent has-background-info has-text-centered">
             <div class="box has-background-info has-text-white" id="artworkInfo">
-
-                <div class="control">
-                    <input class="input" id="searchBar" type="text" placeholder="search wikipedia..." />
-                    <button class="button is-primary is-rounded mt-2" id="submitWBtn" type="submit">Click Here</button>
-                </div>
+                <!-- <div class="control">
+                    <a id="wikipedia" href="https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" target="_blank">Click Here for Wikipedia Link to Text Entered in Search Box</a>
+                </div> -->
             </div>
             <!--section for artwork to populate into-->
             <div class="column is-8 is-parent has-background-info has-text-centered">
-
                 <p class="title has-text-white">Artwork Info</p>
-                
             </div>
         </div>
 
         <div>
             <ul id="searchResults">
                 <div id="noResults" class="animated fadeInDown" style="display:none;">
-                    <h2>no results found!</h2>
+                    <h2>No results found!</h2>
                 </div>
             </ul>
         </div>
     </section>
-
 
     <script rel=javascript src=./assets/script.js></script>
 
