@@ -19,48 +19,33 @@
     </section>
 
     <!--section to input location for train-->
-    <div class="columns has-text-centered">
-        <div class="column field has-background-info-light">
-            <label class="label">Location</label>
-            <figure class="media-is-centered"></figure>
-            <p class="image is-128x128">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
-            </p>
-            <p class="has-text-grey">*image of artwork to appear here</p>
+    <section class="columns has-text-centered">
+        <div class="column is-2 field has-background-info-light">
+            <label class="label">Search Here</label>
+            <div class="box">
+                <p>Enter your search below to see current works in the Art Institute of Chicago. You can search by
+                    artist, artwork name, or general topic (e.g. cats or dogs).</p>
+            </div>
             <div class="control">
-                <input class="input is-medium mt-2" id="inputValue" type="text" placeholder="enter your location here">
+                <input class="input is-medium mt-2" id="inputValue" type="text" placeholder="enter search topic">
                 <button class="button is-primary is-rounded mt-2" id="submitBtn" type="submit"
                     value="Submit Input">Submit</button>
             </div>
         </div>
 
-    <div class="container">
-
-        <form id="wikiSearch" class="wikiSearch">
-            <!--<h1 class="title">Wiki Viewer</h1>-->
-            <input id="searchBar" type="text" autocomplete="off" name="search" placeholder="search wikipedia..." />
-            <span class="inputUnderline"></span>
-            <button id="submitWBtn" type="submit"><i class="fas fa-search fa-3x"></i></i></button>
-        </form>
-
-        <div>
-            <ul id="searchResults">
-                <div id="noResults" class="animated fadeInDown" style="display:none;">
-                    <h2>no results found!</h2>
-                </div>
-            </ul>
+        <div class="column is-2 field has-background-info-light" id="wikiSearch">
+            <label class="label">Wikipedia Search</label>
+            <p>
+                Artwork: <input id="userinput" value="rainbow"></input>
+            </p>
         </div>
-    </div>
 
-
-
-        <!--section for route to populate into-->
-        <div class="column tile is-8 is-parent has-background-info has-text-centered">
-            <div class="tile is-child box has-background-info has-text-white">
+        <!--section for artwork to populate into-->
+        <div class="column is-8 is-parent has-background-info has-text-centered">
+            <div class="box has-background-info has-text-white" id="artworkInfo">
                 <p class="title has-text-white">Artwork Info</p>
-                <lorem> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ducimus unde maiores alias
-                    libero aperiam nulla quo at quisquam culpa eaque enim beatae sapiente ab, a ipsa necessitatibus cum
-                    quos!</lorem>
+                <p id="titleOfPiece"></p>
+                <p id="thumbnail"></p>
             </div>
         </div>
 
@@ -71,6 +56,8 @@
                 </div>
             </ul>
         </div>
+    </section>
 
-        <script rel=javascript src=./assets/script.js></script>
-    </div>
+    <script rel=javascript src=./assets/script.js></script>
+
+</body>
