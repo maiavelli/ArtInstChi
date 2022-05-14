@@ -12,9 +12,10 @@ var thumbnailEl = document.getElementById('thumbnail')
 var artworkInfo = document.getElementById('artworkInfo');
 
 
-//search Art Insitute Data Base
+//search Art Insitute Database
 function getApi() {
-    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value;
+    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + "?fields=id,title,image_id";
+    console.log(requestUrl);
 
 //fetch data via URL
     fetch(requestUrl)
@@ -25,6 +26,7 @@ function getApi() {
         .then(function (data) {
             console.log(data);
 
+        //loop through titles for up to 6 artworks
 
             for (var i = 0; i < 6; i++) {
 
@@ -32,13 +34,14 @@ function getApi() {
 
                 titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
 
+            //display in HTML
                 artworkInfo.appendChild(titleParagraph);}
-        //title of piecee data
-            //var titleVal = data['data'][i]['title'];
-            //console.log(titleVal);
+            
+            var imageURL = data['config']['iiif_url'];
+            console.log(imageURL);
 
-        //display in HTML
-        //titleOfPieceEl.textContent = "title of piece: " + titleVal;}
+            var imageRetrieve = imageURL + data['data'][0]['image_id'] + "/full/843,/0/default.jpg";
+            console.log(imageRetrieve);
         });
 }
 
