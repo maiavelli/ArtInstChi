@@ -1,8 +1,8 @@
 var inputValue = document.getElementById('inputValue');
 var submitBtn = document.getElementById('submitBtn');
-var query = searchBar.value;
-var searchBar = document.getElementById('searchBar');
 var submitWBtn = document.getElementById('submitWBtn');
+var searchBar = document.getElementById('searchBar');
+var query = searchBar.value;
 
 function getApi() {
     var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value;
@@ -22,14 +22,14 @@ submitBtn.addEventListener("click", getApi);
 
 
 
-var api = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=35&gsrsearch="
+var api = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + searchBar.value
 
 // var cb = '&callback=JSON_CALLBACK';
 var url = ''; // Set url from outside addEventListener function
 
 submitWBtn.addEventListener('click', function(e) { // Listen for click on submit button
 
-    $("#searchResults").empty(); // Clear search results
+    document.getElementById("#searchResults").empty(); // Clear search results
 
     e.preventDefault(); // Prevent default behavior of submit button
 
