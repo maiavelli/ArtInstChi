@@ -14,7 +14,7 @@ var artworkInfo = document.getElementById('artworkInfo');
 
 //search Art Insitute Data Base
 function getApi() {
-    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value;
+    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + '[term][is_public_domain]=true&limit=5&fields=id,title,image_id';
 
 //fetch data via URL
     fetch(requestUrl)
