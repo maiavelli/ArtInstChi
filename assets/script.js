@@ -56,21 +56,6 @@ function getApi() {
         });
 }
 
-            for (var i = 0; i < 6; i++) {
-
-                var titleParagraph = document.createElement('p');
-
-                titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
-
-                artworkInfo.appendChild(titleParagraph);}
-        //title of piecee data
-            //var titleVal = data['data'][i]['title'];
-            //console.log(titleVal);
-
-        //display in HTML
-        //titleOfPieceEl.textContent = "title of piece: " + titleVal;}
-        });
-}
 
 submitBtn.addEventListener("click", getApi);
 
