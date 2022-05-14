@@ -31,27 +31,31 @@ function getApi() {
             for (var i = 0; i < 6; i++) {
 
                 var titleParagraph = document.createElement('p');
+                console.log(titleParagraph);
 
                 titleParagraph.textContent = "title of piece: " + data['data'][i]['title'];
             
             //image display 
-                //var imageURL = data['config']['iiif_url'];
-                //var imageRetrieve = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
-                //var image = document.createElement('image');
-                //image.src = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
+                var imageURL = data['config']['iiif_url'];
+                var imageRetrieve = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
+                var image = document.createElement('img');
+                image.src = imageURL + "/" + data['data'][i]['image_id'] + "/full/843,/0/default.jpg";
+                console.log(image.src);
+                console.log(imageRetrieve);
+                console.log(image);
 
             //display in HTML
                 artworkInfo.appendChild(titleParagraph);
-                //artworkInfo.appendChild(image);
+                artworkInfo.appendChild(image);
             }
 
             //image display 
-            var imageURL = data['config']['iiif_url'];
-            console.log(imageURL);
+            //var imageURL = data['config']['iiif_url'];
+            //console.log(imageURL);
 
-            var imageRetrieve = imageURL + "/" + data['data'][0]['image_id'] + "/full/843,/0/default.jpg";
-            console.log(imageRetrieve);
-            document.getElementById('imageOfPiece').src = imageRetrieve;
+            //var imageRetrieve = imageURL + "/" + data['data'][0]['image_id'] + "/full/843,/0/default.jpg";
+            //console.log(imageRetrieve);
+            //document.getElementById('imageOfPiece').src = imageRetrieve;
 
         });
 }
