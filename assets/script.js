@@ -56,9 +56,10 @@ function getApi() {
         });
 }
 
-
 submitBtn.addEventListener("click", getApi);
 
+
+//Wikipedia API
 var searchUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
 var contentUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=';
 

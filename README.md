@@ -23,13 +23,9 @@ THEN an image and data of the artwork populate the webpage
 
 - Data for Artwork: https://api.artic.edu/api/v1/artworks/{id}
 
--
+- Wikipedia API: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=
 
-# Tasks Breakdown
-- Colin: Image API
+# Important Links
 
-- Blaise: Wikipedia API
-
-- Melissa: Wikipedia API
-
-- Maia: Update JavaScript Data to Page
+URL: https://maiavelli.github.io/ArtInstChi/
+Repo: https://github.com/maiavelli/ArtInstChi.git
