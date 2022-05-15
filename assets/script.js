@@ -10,6 +10,7 @@ var submitWBtn = document.getElementById('submitWBtn');
 var titleOfPieceEl = document.getElementById('titleOfPiece')
 var thumbnailEl = document.getElementById('thumbnail')
 var artworkInfo = document.getElementById('artworkInfo');
+var carousel = document.getElementById('artworkCarousel');
 
 function getApi() {
     //search Art Insitute Database
@@ -47,8 +48,8 @@ function getApi() {
                 console.log(image);
 
                 //display in HTML
-                artworkInfo.appendChild(titleParagraph);
-                artworkInfo.appendChild(image);
+                carousel.appendChild(titleParagraph);
+                carousel.appendChild(image);
             }
 
         });
