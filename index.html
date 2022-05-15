@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Art Institute of Chicago</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 </head>
 
 <body>
@@ -20,13 +21,11 @@
 
     <!--section to input location for train-->
     <section class="columns has-text-centered">
-        <div class="column is-2 field has-background-info-light">
+        <div class="column is-3 field has-background-info-light">
             <label class="label">Search Here</label>
             <div class="box">
-
-                <p>Enter your search below to see current works in the Art Institute of Chicago. You can also search by
+                <p>Enter your search below to see current works in the Art Institute of Chicago database. You can search by
                     artist, artwork name, or general topic (e.g. cats or dogs).</p>
-
             </div>
             <div class="control">
                 <input class="input is-medium mt-2" id="inputValue" type="text" placeholder="enter search topic">
@@ -36,15 +35,10 @@
         </div>
 
         <!--section for artwork to populate into-->
-        <div class="column is-8 is-parent has-background-info has-text-centered">
+        <div class="column is-9 has-background-info has-text-centered">
             <div class="box has-background-info has-text-white" id="artworkInfo">
-                <!-- <div class="control">
-                    <a id="wikipedia" href="https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" target="_blank">Click Here for Wikipedia Link to Text Entered in Search Box</a>
-                </div> -->
-            </div>
-            <!--section for artwork to populate into-->
-            <div class="column is-8 is-parent has-background-info has-text-centered">
                 <p class="title has-text-white">Artwork Info</p>
+                <div class = "carousel" id = "artworkCarousel"></div>
             </div>
         </div>
 
@@ -58,5 +52,6 @@
     </section>
 
     <script rel=javascript src=./assets/script.js></script>
+    <script src="~bulma-carousel/dist/js/bulma-carousel.min.js"></script>
 
 </body>
