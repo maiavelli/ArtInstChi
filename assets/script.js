@@ -12,20 +12,22 @@ var thumbnailEl = document.getElementById('thumbnail')
 var artworkInfo = document.getElementById('artworkInfo');
 var carousel = document.getElementById('artworkCarousel');
 
+let index = 0;
+
 var listOfArtworkSearches = document.getElementById("listArtworkSearched");
 var containerElement = document.getElementById("currentSearch");
 
 function getApi(valueSearched) {
     //search Art Insitute Database
-    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + "&fields=id,title,image_id";
+    var requestUrl = 'https://api.artic.edu/api/v1/artworks/search?q=' + inputValue.value + "&fields=id,title,image_id,artist_titles,is_on_view";
     console.log(requestUrl);
 
     searchArray = JSON.parse(localStorage.getItem("searchedValue")) || [inputValue];
     localStorage.setItem("searchedValue", JSON.stringify(searchArray));
 
     //search Wikipedia Database
-    var WikipediaUrl = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch=" + inputValue.value;
-    console.log(WikipediaUrl);
+    //var WikipediaUrl = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch=" + inputValue.value;
+    //console.log(WikipediaUrl);
 
     //fetch data via URL
     fetch(requestUrl)
@@ -43,7 +45,16 @@ function getApi(valueSearched) {
                 var titleParagraph = document.createElement('p');
                 console.log(titleParagraph);
 
+                var artistParagraph = document.createElement('p');
+                var onView = document.createElement('p');
+
                 titleParagraph.textContent = "Title of Piece: " + data['data'][i]['title'];
+                artistParagraph.textContent = "Artist: " + data['data'][i]['artist_titles'][0];
+
+                if (data['data'][i]['is_on_view'] === true) {
+                    onView.textContent = "This work is currently on view at the Art Insitute of Chicago!"
+                }
+                
 
                 //image display 
                 var imageURL = data['config']['iiif_url'];
@@ -56,7 +67,10 @@ function getApi(valueSearched) {
 
                 //display in HTML
                 carousel.appendChild(titleParagraph);
+                carousel.appendChild(artistParagraph);
+                carousel.appendChild(onView);
                 carousel.appendChild(image);
+                
             }
 
         });
@@ -76,9 +90,11 @@ function getApi(valueSearched) {
 submitBtn.addEventListener("click", function (event) {
     // valueSearched = document.getElementById("userSearch").value;
     getApi();
+    i = 0;
     // displaySearch();
 }
 );
+submitBtn.addEventList
 
 // //display users choices on screen as list items
 // function displaySearch() {
