@@ -90,11 +90,16 @@ function getApi(valueSearched) {
 submitBtn.addEventListener("click", function (event) {
     // valueSearched = document.getElementById("userSearch").value;
     getApi();
-    i = 0;
+
+    const searchInput = document.getElementById('inputValue');
+  // Send value to server
+  console.log(searchInput.value);
+  //  clear input field
+  searchInput.value = '';
+});
+
     // displaySearch();
-}
-);
-submitBtn.addEventList
+
 
 // //display users choices on screen as list items
 // function displaySearch() {
