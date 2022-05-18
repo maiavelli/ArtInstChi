@@ -112,6 +112,7 @@ submitBtn.addEventListener("click", function(){
 
 
   //  clear input field
+    const searchInput = document.getElementById('inputValue');
     searchInput.value = '';
     displaySearch();
 });
