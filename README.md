@@ -5,25 +5,24 @@ A simple application to illustrate artwork at the Art Institute of Chicago in Il
 
 # User Story
 ```
-AS A visitor to Chicago, Illinois
-I WANT to see all the pubslihed artworks in the Art Institute of Chicago's collection
-SO THAT I can see data for a particular artowrk
+AS AN art lover and visitor to Chicago, Illinois
+I WANT to see all the published artworks in the Art Institute of Chicago's online database
+SO THAT I can see data and images for a particular artwork and find out whether they are on view at AIC or not
 ```
 
 # Acceptance Criteria
 ```
 GIVEN THAT I open the app
-WHEN I enter an artwork or
-WHEN I enter an artwork ID
-THEN an image and data of the artwork populate the webpage
+WHEN I enter an artist name, artwork name, or general search topic
+THEN I am met with a selection of 5 artworks relevant to that search
+WHEN my search is completed
+THEN I can see the name of the artworks, the artist's names, images of those works, and whether it is currently on display at the museum
 ```
 
 # APIs to Be Used 
 - Artwork: https://api.artic.edu/api/v1/artworks
 
 - Data for Artwork: https://api.artic.edu/api/v1/artworks/{id}
-
-- Wikipedia API: https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=
 
 # Important Links
 
