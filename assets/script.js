@@ -38,7 +38,10 @@ function getApi(valueSearched) {
 
             //loop through titles for up to 6 artworks
 
-            for (var i = 0; i < 6; i++) {
+            for (var i = 0; i < 10 ; i++) {
+             //   var carouselCard = document.createElement('div')
+            //console.log(carouselCard)
+
 
                 var titleParagraph = document.createElement('p');
                 console.log(titleParagraph);
@@ -53,27 +56,44 @@ function getApi(valueSearched) {
                 console.log(image.src);
                 console.log(imageRetrieve);
                 console.log(image);
-
                 //display in HTML
-                carousel.appendChild(titleParagraph);
-                carousel.appendChild(image);
-            }
+  //              carousel.appendChild(carouselCard)
+               // carousel.appendChild(titleParagraph);
+                //carousel.appendChild(image);
+               // $(document).ready(function(){  
+                 //   for(var i=0 ; i< 10 ; i++) {     
+                      $('<div class="item"><img src="'+ image.src +'"><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
+                      $('<li data-target="#art-carousel" data-slide-to="'+ i +'"></li>').appendTo('.carousel-indicators')
+                  
+                    
+                      $('.item').first().addClass('active');
+                      $('.carousel-indicators > li').first().addClass('active');
+                      $('#art-carousel').carousel()
+                  
+                  
+                  $(".left").click(function(){
+                    $("#myCarousel").carousel("prev");
+                  });
+                  $(".right").click(function(){
+                    $("#myCarousel").carousel("next");
+                  });
+                }
+                  });
+                          //fetch data via URL
+                     fetch(WikipediaUrl)
+                        .then(function (response) {
+                        return response.json();
+                        })
 
-        });
+                        .then(function (data) {
+                            console.log(data);
 
-    //fetch data via URL
-    fetch(WikipediaUrl)
-        .then(function (response) {
-            return response.json();
-        })
+                        });
+                    }
+                    
+        
 
-        .then(function (data) {
-            console.log(data);
-
-        });
-}
-
-submitBtn.addEventListener("click", function (event) {
+submitBtn.addEventListener("click", function handleclick(event) {
     // valueSearched = document.getElementById("userSearch").value;
     getApi();
     const searchInput = document.getElementById('inputValue');
