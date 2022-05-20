@@ -37,7 +37,7 @@ function getApi() {
 
         .then(function (data) {
             console.log(data);
-            carousel.innerHTML = '';
+            
 
             //loop through data for up to 6 artworks
 
@@ -72,13 +72,23 @@ function getApi() {
                 console.log(image);
 
                 //display in HTML
-                carousel.appendChild(titleParagraph);
-                carousel.appendChild(artistParagraph);
-                carousel.appendChild(onView);
-                carousel.appendChild(image);
-                
+                //carousel.appendChild(titleParagraph);
+                //carousel.appendChild(artistParagraph);
+                //carousel.appendChild(onView);
+                //carousel.appendChild(image); 
+                 $('<div class="carousel-item"><img src=" '+ image.src +' " class="d-block" style="width:100%"><div class="carousel-caption"></div>"</div>').appendTo('.carousel-inner');
+                $('<button button type="button" data-bs-target="#art-carousel" data-bs-slide-to="'+ i +'"></button>').appendTo('.carousel-indicators')
             }
+        
+        $('.carousel-item').first().addClass('active');
+        $('.carousel-indicators > button').first().addClass('active');
+        $('#art-carousel').carousel()
+        
+              
+          
+  
 
+          
         });
 };
     //fetch data via URL
