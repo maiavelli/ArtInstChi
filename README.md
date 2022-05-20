@@ -19,12 +19,12 @@ WHEN my search is completed
 THEN I can see the name of the artworks, the artist's names, images of those works, and whether it is currently on display at the museum
 ```
 
-# APIs to Be Used 
-- Artwork: https://api.artic.edu/api/v1/artworks
+# APIs Used 
+- Artwork Images API: https://iiif.io/api/image/2.0/
 
-- Data for Artwork: https://api.artic.edu/api/v1/artworks/{id}
+- Art Institute of Chicago API: https://api.artic.edu/api/v1/artworks/{id}
 
 # Important Links
 
-URL: https://maiavelli.github.io/ArtInstChi/
+Deployed URL: https://maiavelli.github.io/ArtInstChi/
 Repo: https://github.com/maiavelli/ArtInstChi.git
