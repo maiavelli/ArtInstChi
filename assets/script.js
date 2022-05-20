@@ -76,7 +76,7 @@ function getApi() {
                 //carousel.appendChild(artistParagraph);
                 //carousel.appendChild(onView);
                 //carousel.appendChild(image); 
-                 $('<div class="carousel-item"><img src=" '+ image.src +' " class="d-block" style="width:100%"><div class="carousel-caption"></div>"</div>').appendTo('.carousel-inner');
+                 $('<div class="carousel-item"><img src=" '+ image.src +' " class="d-block" style="width:100%"><div class="carousel-caption></div><p>' +data['data'][i]['title']+'</p>').appendTo('.carousel-inner');
                 $('<button button type="button" data-bs-target="#art-carousel" data-bs-slide-to="'+ i +'"></button>').appendTo('.carousel-indicators')
             }
         
