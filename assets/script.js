@@ -24,11 +24,6 @@ function getApi() {
     var search = inputValue.value;
     localStorage.setItem("recentSearch", search);
 
-
-    //search Wikipedia Database
-    //var WikipediaUrl = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch=" + inputValue.value;
-    //console.log(WikipediaUrl);
-
     //fetch data via URL
     fetch(requestUrl)
         .then(function (response) {
@@ -81,17 +76,6 @@ function getApi() {
 
         });
 };
-    //fetch data via URL
-    //fetch(WikipediaUrl)
-    //   .then(function (response) {
-     //       return response.json();
-       // })
-
-        //.then(function (data) {
-      //      console.log(data);
-
-      //  });
-//}
 
 function displaySearch() {
         console.log(localStorage.getItem("recentSearch"));
@@ -105,15 +89,11 @@ function displaySearch() {
         })
 };
 
-
-
 submitBtn.addEventListener("click", function(){
     getApi();
-
 
   //  clear input field
     const searchInput = document.getElementById('inputValue');
     searchInput.value = '';
     displaySearch();
 });
-
