@@ -31,7 +31,7 @@ SO THAT I can see data and images for a particular artwork and find out whether 
 ```
 GIVEN THAT I open the app
 WHEN I enter an artist name, artwork name, or general search topic
-THEN I am met with a selection of 5 artworks relevant to that search
+THEN I am met with a selection of 10 artworks relevant to that search
 WHEN my search is completed
 THEN I can see the name of the artworks, the artist's names, images of those works, and whether it is currently on display at the museum
 WHEN I enter a subsequent search
