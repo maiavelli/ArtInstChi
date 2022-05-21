@@ -3,9 +3,6 @@
 var inputValue = document.getElementById('inputValue');
 var submitBtn = document.getElementById('submitBtn');
 
-var searchBar = document.getElementById('searchBar');
-var submitWBtn = document.getElementById('submitWBtn');
-
 //artwork info section variables
 var titleOfPieceEl = document.getElementById('titleOfPiece')
 var thumbnailEl = document.getElementById('thumbnail')
